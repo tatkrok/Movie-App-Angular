@@ -1,0 +1,23 @@
+<div class="login-container">
+    <img class="film" src="assets/images/film.png">
+    <div class="logo">Movie Land</div>
+    <div class="desc">
+        Need some help deciding what to watch before all your popcorn runs out? 
+        We’ve got you covered! With this guide you can find the best movies to watch online across all languages, eras, 
+        and genres all under one roof. From seeing where to watch movies for free to keeping track of all the new movie releases, 
+        our easy-to-use guide is your go-to hub for all things movies.
+    </div>
+    <div class="login-form">
+        <div class="form-group">
+            <label for="name">Username</label>
+            <input type="text" name="name" class="form-control"[(ngModel)]="username"/>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="text" name="password" class="form-control"[(ngModel)]="password"/>
+    </div>
+    <div class="btn-container">
+        <div class="error">{{ errorMsg }}</div>
+        <button class="btn btn-dark" (click)="login()">Login</button>
+    </div>
+</div>

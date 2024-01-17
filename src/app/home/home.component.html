@@ -1,0 +1,36 @@
+<app-header></app-header>
+<div class="home-container">
+  <div class="all-movies">
+    <div class="trending-movies">
+      <div class="top">
+        <h4>Trending Movies</h4>
+        <div class="view-all">View All</div>
+      </div>
+      <div class="movies-thumbnail">
+        <div class="movie" *ngFor="let movie of trendingMovies">
+          <div class="cover" (click)="goToMovie('trending', movie.id)">
+            <img [src]="movie.cover" alt="" />
+          </div>
+          <div class="detail">
+            <div class="name" (click)="goToMovie('trending', movie.id)">{{ movie.name }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="theatre-movies">
+      <div class="top">
+      </div>
+      <div class="movies-thumbnail">
+        <div class="movie" *ngFor="let movie of theatreMovies">
+          <div class="cover" (click)="goToMovie('theatre', movie.id)">
+            <img [src]="movie.cover" alt="" />
+          </div>
+          <div class="detail">
+            <div class="name" (click)="goToMovie('theatre', movie.id)">{{ movie.name }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
